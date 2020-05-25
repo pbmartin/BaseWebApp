@@ -81,11 +81,11 @@ function getWeather(searchQuery) {
 
   $.ajax(url,{success: function(data){
     console.log(data);
-    $(".city").text("City: " + data.name);
-    $(".temp").text("Temperature (f): " + data.main.temp + "\xB0");
-    $(".feels_like").text("Feels Like (f): " + data.main.feels_like + "\xB0");
-    $(".humidity").text("Humidity: " + data.main.humidity + "%");
-    $(".wind").text("Wind Speed: " + data.wind.speed + " mph");
+    $(".city").text(data.name);
+    $(".temp").text(data.main.temp);
+    $(".feels_like").text(data.main.feels_like);
+    $(".humidity").text(data.main.humidity);
+    $(".wind").text(data.wind.speed);
   }, error: function(error){
     $(".error-message").text("An error occured");
 }})
