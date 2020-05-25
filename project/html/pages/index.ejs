@@ -3,21 +3,35 @@
     <% include ../helpers/head %>
 </head>
 
+<script>
+  //display rows of data
+  $(document).ready(function(){
+  getPosts();
+})
+</script>
+
 <body>
   <!-- the classes 'page-header' and 'btn btn-dark' create bootstrap components.  -->
   <!-- Check out more components here: http://getbootstrap.com/components/ -->
   <div class="page-header">
-
+    <% include ../helpers/navbar %>
   
-    <h1>Howdy Ya'll</h1>
+    <h1>Database Web App</h1>
   </div>
 
-  <p>Click on the button for a surprise.</p>
+  <button onClick="handleSignIn()">Login</button>
 
-  <button onClick="showPicture()" class="btn btn-dark">Click me</button>
+  <form onSubmit="handleMessageFormSubmit()" action="#">
+    Title:<br>
+    <input id="post-title"><br>
+    Body:<br>
+    <textarea id="post-body"></textarea><br>
+    <button>Submit</button>
 
-  <div id="image"></div>
-  
+  </form>
+
+  <div id="post-listing"></div>
+
 </body>
 
 </html>

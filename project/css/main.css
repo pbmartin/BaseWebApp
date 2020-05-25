@@ -32,3 +32,23 @@ button {
   height: 200px;
   margin-top: 60px;
 }
+
+.nav {
+  background-color: darkgrey;
+  color: #666666;
+  padding: .5rem 1rem;
+}
+
+.nav-link {
+  background-color: darkgrey;
+  color: gray;
+}
+
+.nav-item a{
+  color: #ffffff;
+}
+
+.nav-item a:hover {
+  color: #ffffff;
+  background-color: black;
+}
